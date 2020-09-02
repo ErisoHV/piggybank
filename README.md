@@ -35,33 +35,10 @@ Esto levantará el servidor. La aplicación por defecto iniciará en el puerto 8
 
 Ingrese a la aplicación a través de: http://IP:PUERTO/ (por ejemplo: http://192.168.x.x:8081/)
 
-# Screenshots
+# Demo
 
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/1.PNG)
+ ![Demo de la app](https://github.com/ErisoHV/piggybank/blob/master/screenshots/demo.gif)
 
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/2.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/2.1.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/3.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/4.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/4.1.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.1.PNG)
-
-
-![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.2.PNG)
 
 
 
