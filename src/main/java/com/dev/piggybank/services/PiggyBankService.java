@@ -20,11 +20,11 @@ public class PiggyBankService {
 		this.piggyBankMovementRepository = piggyBankMovementRepository;
 	}
 	
-	public int getTotalAmountByCoinDenominationId (int coinDenominationId) {
+	public Integer getTotalAmountByCoinDenominationId (int coinDenominationId) {
 		return this.piggyBankRepository.getTotalAmountByCoinDenominationId(coinDenominationId);
 	}
 	
-	public int getTotalAmount() {
+	public Integer getTotalAmount() {
 		return this.piggyBankRepository.getTotalAmount();
 	}
 	
@@ -32,18 +32,23 @@ public class PiggyBankService {
 		return this.piggyBankRepository.findByIdCoinDenomination(coinDenominationId);
 	}
 	
-	public int getTotalCoins() {
-		return this.piggyBankRepository.getTotalAmount();
+	public Integer getTotalByCoinDenominationId (int coinDenominationId) {
+		return this.piggyBankRepository.getTotalByCoinDenominationId(coinDenominationId);
+	}
+	
+	
+	public Integer getTotalCoins() {
+		return this.piggyBankRepository.getTotalCoins();
 	}
 	
 	public PiggyBank saveToPiggyBank(PiggyBankMovement movement) {
 		
 		// piggy bank current status
 		PiggyBank piggyBank = piggyBankRepository.findByCoinDenomination(movement.getCoinDenomination());
-		
+
 		// remove coins validation : not enough coins
 		if (movement.getMovementValue() < 0 && piggyBank.getTotal() < (movement.getMovementValue() * -1)) {
-			throw new InvalidMovementValueException(movement.getCoinDenomination());
+			throw new InvalidMovementValueException(piggyBank.getCoinDenomination());
 		}
 		
 		// 1. movement

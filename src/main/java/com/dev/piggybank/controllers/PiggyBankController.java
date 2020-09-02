@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dev.piggybank.domain.PiggyBank;
 import com.dev.piggybank.domain.PiggyBankMovement;
+import com.dev.piggybank.response.PiggyBankTotalsResponse;
 import com.dev.piggybank.services.MovementService;
 import com.dev.piggybank.services.PiggyBankService;
 
@@ -74,6 +75,20 @@ public class PiggyBankController {
 	public ResponseEntity<PiggyBank> removeCoinsFromPiggyBank(@RequestBody PiggyBankMovement movement) {
 		movement.setMovementValue(movement.getMovementValue() * -1);
 		return new ResponseEntity<PiggyBank>(piggyBankService.saveToPiggyBank(movement), HttpStatus.OK);
+	}
+	
+	@GetMapping(value= "/totals")
+	public ResponseEntity<PiggyBankTotalsResponse> getTotals(){
+		PiggyBankTotalsResponse response = new PiggyBankTotalsResponse(piggyBankService.getTotalAmount(), piggyBankService.getTotalCoins());
+		return new ResponseEntity<PiggyBankTotalsResponse>(response, HttpStatus.OK);
+	}
+	
+	@GetMapping(value= "/totals/{coinDenominationId}")
+	public ResponseEntity<PiggyBankTotalsResponse> getTotalsByDenomination(@PathVariable("coinDenominationId") int coinDenominationId){
+		PiggyBankTotalsResponse response = new PiggyBankTotalsResponse(
+				piggyBankService.getTotalAmountByCoinDenominationId(coinDenominationId), 
+				piggyBankService.getTotalByCoinDenominationId(coinDenominationId));
+		return new ResponseEntity<PiggyBankTotalsResponse>(response, HttpStatus.OK);
 	}
 
 }
