@@ -37,8 +37,31 @@ Ingrese a la aplicación a través de: http://IP:PUERTO/ (por ejemplo: http://19
 
 # Screenshots
 
-![Pantalla principal](/sreenshots/1.PNG)
-Format: ![Principal](url)
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/1.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/2.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/2.1.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/3.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/4.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/4.1.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.1.PNG)
+
+
+![](https://github.com/ErisoHV/piggybank/blob/master/screenshots/5.2.PNG)
 
 
 
