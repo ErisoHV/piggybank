@@ -32,6 +32,11 @@ public class PiggyBankController {
 	@Autowired
 	PiggyBankService piggyBankService;
 	
+	public PiggyBankController(MovementService movementService, PiggyBankService piggyBankService) {
+		this.movementService = movementService;
+		this.piggyBankService = piggyBankService;
+	}
+	
 	@GetMapping(value="/movements", produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<PiggyBankMovement>> getMovements() {
 		List<PiggyBankMovement> movementList = new ArrayList<PiggyBankMovement>();
